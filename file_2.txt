@@ -42,3 +42,10 @@ FROM `courses`
 JOIN `course_teacher`ON `courses`.`id`= `course_teacher`.`course_id`
 JOIN `teachers`ON `teachers`.`id` = `course_teacher`.`teacher_id`
 WHERE `teachers`.`id`= 44;
+
+snack5
+SELECT `degrees`.`name`AS`corso_di_laurea`, `courses`.`name`AS`nome_corso`,`teachers`.`name`AS`nome`,`teachers`.`surname`as`cognome`
+FROM `degrees`
+JOIN `courses` ON `courses`.`degree_id`= `degrees`.`id`
+JOIN `course_teacher`ON `courses`.`id`= `course_teacher`.`course_id`
+JOIN `teachers` ON `teachers`.`id`= `course_teacher`.`teacher_id`;
